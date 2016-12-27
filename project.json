@@ -13,6 +13,12 @@
 
     "jsList" : [
         "src/resource.js",
-        "src/app.js"
+
+        "src/Config/Config.js",
+        "src/Config/Player.js",
+
+        "src/Home/Scene/HomeScene.js",
+        "src/Home/Layer/HomeBgLayer.js",
+        "src/Common/Sprite/PlayerSprite.js"
     ]
 }
