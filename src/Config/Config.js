@@ -1,7 +1,7 @@
 
 var GF = GF || {};
 
-GF.winSize = cc.size(320, 480);
+GF.winSize = cc.size(320, 568);
 
 GF.h = GF.winSize.height;
 

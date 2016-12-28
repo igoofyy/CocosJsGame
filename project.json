@@ -16,6 +16,7 @@
 
         "src/Config/Config.js",
         "src/Config/Player.js",
+        "src/Config/Color.js",
 
         "src/Home/Scene/HomeScene.js",
         "src/Home/Layer/HomeBgLayer.js",
