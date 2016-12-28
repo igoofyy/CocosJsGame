@@ -27,6 +27,7 @@ var HomeLayer = cc.Layer.extend({
             height:0.1
         });
         this.addChild(playerSprite,1);
+        playerSprite.runAction(cc.moveBy(2, cc.p(Math.random() * GF.w, playerSprite.y + GF.h + 100)));
         this.player = playerSprite;
 
         var btn = new StartBtnLayer(function(){
@@ -35,19 +36,26 @@ var HomeLayer = cc.Layer.extend({
 
         btn.attr({
             x: GF.w_2,
-            y: 150,
+            y: 120,
         });
         this.addChild(btn,1);
-        // this.timer();
+        this.timer();
 
     },
 
     timer: function () {
-        this.schedule(this.update, 0.25);
+        this.schedule(this.update, 0.1);
     },
 
     update: function () {
-        console.log("定时器执行")
+        if (this.player.y > 568) {
+            this.player.x = Math.random() * GF.w;
+            this.player.y = 10;
+            this.player.runAction(cc.moveBy(
+                parseInt(3 * Math.random(), 10),
+                cc.p(Math.random() * GF.w, this.player.y + 568)
+            ));
+        }
     }
 
 
