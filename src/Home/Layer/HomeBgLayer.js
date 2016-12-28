@@ -15,15 +15,6 @@ var HomeBgLayer = cc.Layer.extend({
 
         this.addChild(sprite, 0);
 
-        var playerSprite = new cc.Sprite(res.player01_png);
-        playerSprite.attr({
-            x: GF.w_2 - 40,
-            y: 20,
-            width:0.1,
-            height:0.1
-        });
-        this.addChild(playerSprite,0);
-
         var levelLabel = new cc.LabelTTF('Level',"arial",20);
         levelLabel.x = 40;
         levelLabel.y = GF.h - 20;
@@ -55,7 +46,6 @@ var HomeBgLayer = cc.Layer.extend({
         stepLabel.y = levelLabel.y;
         stepLabel.setColor(CL.HOME.LABEL);
         this.addChild(stepLabel);
-
 
         return true;
     }

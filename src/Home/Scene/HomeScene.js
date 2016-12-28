@@ -1,7 +1,7 @@
 var HomeScene = cc.Scene.extend({
     onEnter:function () {
         this._super();
-        var layer = new HomeBgLayer();
+        var layer = new HomeLayer();
         this.addChild(layer);
     }
 });

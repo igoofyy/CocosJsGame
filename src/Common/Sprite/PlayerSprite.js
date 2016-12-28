@@ -10,10 +10,8 @@ var PlayerSprite = cc.Sprite.extend({
     /*
        根据状态生成不同的player sprite
      */
-    ctor: function () {
-        this._super();
-
-        // this.playerState = playerState;
+    ctor: function (state) {
+        this._super("res/player0" + state + ".png");
     },
 
     hurt: function () {

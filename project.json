@@ -2,7 +2,7 @@
     "project_type": "javascript",
 
     "debugMode" : 1,
-    "showFPS" : true,
+    "showFPS" : false,
     "frameRate" : 60,
     "noCache" : false,
     "id" : "gameCanvas",
@@ -20,6 +20,8 @@
 
         "src/Home/Scene/HomeScene.js",
         "src/Home/Layer/HomeBgLayer.js",
-        "src/Common/Sprite/PlayerSprite.js"
+        "src/Home/Layer/HomeLayer.js",
+        "src/Common/Sprite/PlayerSprite.js",
+        "src/Home/Layer/StartBtnLayer.js"
     ]
 }

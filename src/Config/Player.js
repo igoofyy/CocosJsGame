@@ -13,7 +13,7 @@ PLAYER.SPEED = 10; //移动速度
 
 // 游戏Sprite的状态
 PLAYER.STATE = {
-    NORMAL  : 0,
-    SUCCESS : 1,
-    FAIL    : 2,
+    NORMAL  : 1,
+    SUCCESS : 2,
+    FAIL    : 3,
 };
