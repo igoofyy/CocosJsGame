@@ -16,17 +16,20 @@ var HomeLayer = cc.Layer.extend({
         var homeBg = new HomeBgLayer();
         homeBg.x = 0;
         homeBg.y = 0;
+        homeBg.anchorX = 0.1;
+        homeBg.anchorY = 0.2;
         this.addChild(homeBg,0);
         this.homeBg = homeBg;
 
+
+
         var playerSprite = new PlayerSprite(PLAYER.STATE.NORMAL);
+
         playerSprite.attr({
-            x: GF.w_2 - 40,
-            y: 20,
-            width:0.1,
-            height:0.1
+            x: GF.w_2,
+            y: 30,
         });
-        this.addChild(playerSprite,1);
+        homeBg.addChild(playerSprite,1);
         playerSprite.runAction(cc.moveBy(2, cc.p(Math.random() * GF.w, playerSprite.y + GF.h + 100)));
         this.player = playerSprite;
 
@@ -35,16 +38,21 @@ var HomeLayer = cc.Layer.extend({
         });
 
         btn.attr({
-            x: GF.w_2,
-            y: 120,
+            x:GF.w_2,
+            y:100,
         });
-        this.addChild(btn,1);
+
+
+        homeBg.addChild(btn,1);
+
+        var point01 = btn.convertToWorldSpace(btn.getPosition());
+        console.log(point01);
         this.timer();
 
     },
 
     timer: function () {
-        this.schedule(this.update, 0.1);
+        this.schedule(this.update, 0.2);
     },
 
     update: function () {
@@ -57,6 +65,4 @@ var HomeLayer = cc.Layer.extend({
             ));
         }
     }
-
-
 });
