@@ -21,10 +21,7 @@ var HomeLayer = cc.Layer.extend({
         this.addChild(homeBg,0);
         this.homeBg = homeBg;
 
-
-
         var playerSprite = new PlayerSprite(PLAYER.STATE.NORMAL);
-
         playerSprite.attr({
             x: GF.w_2,
             y: 30,
@@ -34,20 +31,21 @@ var HomeLayer = cc.Layer.extend({
         this.player = playerSprite;
 
         var btn = new StartBtnLayer(function(){
-            console.log("点击了开始游戏");
+            // cc.audioEngine.stopAllEffects();
+            cc.director.runScene(new cc.TransitionFade(1.2, new PlayGame()));
         });
 
         btn.attr({
             x:GF.w_2,
             y:100,
         });
-
-
         homeBg.addChild(btn,1);
 
         var point01 = btn.convertToWorldSpace(btn.getPosition());
         console.log(point01);
         this.timer();
+
+        var rect = cc.p(100,100);
 
     },
 
@@ -64,5 +62,6 @@ var HomeLayer = cc.Layer.extend({
                 cc.p(Math.random() * GF.w, this.player.y + 568)
             ));
         }
+        this.homeBg.scoreText.setString(this.player.y);
     }
 });

@@ -22,6 +22,10 @@
         "src/Home/Layer/HomeBgLayer.js",
         "src/Home/Layer/HomeLayer.js",
         "src/Common/Sprite/PlayerSprite.js",
-        "src/Home/Layer/StartBtnLayer.js"
+        "src/Home/Layer/StartBtnLayer.js",
+
+        "src/StartGame/Scene/PlayGame.js",
+        "src/StartGame/Layer/PlayGameLayer.js",
+        "src/StartGame/Layer/PlayGameBgLayer.js"
     ]
 }
