@@ -62,6 +62,5 @@ var HomeLayer = cc.Layer.extend({
                 cc.p(Math.random() * GF.w, this.player.y + 568)
             ));
         }
-        this.homeBg.scoreText.setString(this.player.y);
     }
 });
